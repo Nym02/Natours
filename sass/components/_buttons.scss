@@ -40,6 +40,19 @@
             }
         
     }
+    &--green{
+        background-color: $color-primary;
+        color: $color-white;
+
+        
+            &::after{
+                content: '';
+                background-color: $color-primary;
+            
+            
+            }
+        
+    }
 
     &::after{
         content: "";
