@@ -122,7 +122,7 @@ body {
   margin-bottom: 8rem; }
 
 /* line 14, sass/base/_utilities.scss */
-.u-margin-to-big {
+.u-margin-top-big {
   margin-top: 8rem; }
 
 /* line 17, sass/base/_utilities.scss */
@@ -197,14 +197,14 @@ body {
   font-size: 1.6rem;
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid #3370b6;
-  color: #3370b6;
+  border-bottom: 1px solid #1437aa;
+  color: #1437aa;
   padding: .4rem;
   transition: all .2s; }
 
 /* line 91, sass/components/_buttons.scss */
 .btn-text:hover {
-  background-color: #3370b6;
+  background-color: #1437aa;
   color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15); }
@@ -384,6 +384,75 @@ body {
     font-size: 6rem;
     font-weight: 100; }
 
+/* line 1, sass/components/_story.scss */
+.story {
+  width: 75%;
+  margin: 0 auto;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 6rem;
+  padding-left: 9rem;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.15);
+  font-size: 1.6rem;
+  transform: skewX(-12deg);
+  backface-visibility: hidden; }
+  /* line 13, sass/components/_story.scss */
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translate(-3rem) skewX(12deg);
+    position: relative;
+    backface-visibility: hidden; }
+  /* line 25, sass/components/_story.scss */
+  .story__img {
+    height: 100%;
+    transform: translate(-4rem) scale(1.4);
+    backface-visibility: hidden;
+    transition: all .5s; }
+  /* line 31, sass/components/_story.scss */
+  .story__text {
+    transform: skewX(12deg); }
+  /* line 34, sass/components/_story.scss */
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    font-size: 1.7rem;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden; }
+  /* line 50, sass/components/_story.scss */
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  /* line 54, sass/components/_story.scss */
+  .story:hover .story__img {
+    transform: translate(-4rem) scale(1);
+    filter: blur(3px) brightness(80%); }
+
+/* line 1, sass/components/_bg-video.scss */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: .3;
+  overflow: hidden; }
+  /* line 12, sass/components/_bg-video.scss */
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 /* line 1, sass/layouts/_header.scss */
 .header {
   height: 95vh;
@@ -467,3 +536,8 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0 15rem 0;
   margin-top: -10rem; }
+
+/* line 34, sass/pages/_home.scss */
+.section-stories {
+  padding: 15rem 0;
+  position: relative; }
