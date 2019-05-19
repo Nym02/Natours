@@ -453,6 +453,46 @@ body {
     width: 100%;
     object-fit: cover; }
 
+/* line 2, sass/components/_form.scss */
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+/* line 5, sass/components/_form.scss */
+.form__input {
+  border: none;
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 2px;
+  width: 95%;
+  font-family: inherit;
+  border-bottom: 3px solid transparent; }
+  /* line 15, sass/components/_form.scss */
+  .form__input:focus {
+    outline: none;
+    border-bottom: 3px solid #1437aa;
+    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2); }
+  /* line 21, sass/components/_form.scss */
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #E91E63; }
+  /* line 24, sass/components/_form.scss */
+  .form__input::-webkit-input-placeholder {
+    color: #999; }
+
+/* line 30, sass/components/_form.scss */
+.form__label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block;
+  transition: all .3s; }
+
+/* line 39, sass/components/_form.scss */
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
 /* line 1, sass/layouts/_header.scss */
 .header {
   height: 95vh;
@@ -541,3 +581,20 @@ body {
 .section-stories {
   padding: 15rem 0;
   position: relative; }
+
+/* line 41, sass/pages/_home.scss */
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #5b80e6, #1437aa); }
+
+/* line 45, sass/pages/_home.scss */
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
+  background-size: cover;
+  height: 50rem;
+  border-radius: 3px;
+  box-shadow: 0 3rem 2rem rgba(0, 0, 0, 0.2); }
+  /* line 56, sass/pages/_home.scss */
+  .book__form {
+    width: 50%;
+    padding: 6rem; }
